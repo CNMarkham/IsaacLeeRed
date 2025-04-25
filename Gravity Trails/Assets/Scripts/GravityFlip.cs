@@ -22,13 +22,17 @@ public class GravityFlip : MonoBehaviour
             {
                 avatarRigidbody.gravityScale = -1f;
                 Vector2 newDirection = avatarTransform.localScale;
-                newDirection.y *= -1f;
+                newDirection = avatarTransform.localScale;
+                newDirection.y = -1;
+                avatarTransform.localScale = newDirection*1;
             }
             else
             {
                 avatarRigidbody.gravityScale = 1f;
                 Vector2 newDirection = avatarTransform.localScale;
-                newDirection.y *= 1f;
+                newDirection = avatarTransform.localScale;
+                newDirection.y = 1;
+                avatarTransform.localScale = newDirection*1;
             }
         }
     }
