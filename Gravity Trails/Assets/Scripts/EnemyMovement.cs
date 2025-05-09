@@ -10,16 +10,22 @@ public class EnemyMovement : MonoBehaviour
         GetComponent<Rigidbody2D>().AddForce(Vector2.right * speed, ForceMode2D.Impulse);
     }
 
+    public void Update()
+    {
+        transform.Rotate(0, 0, 1.99f);
+    }
+
     // Update is called once per frame
     private void fixedUpdate()
     {
-//        Vector2 newDirection = PlayerTransform.localScale;
-//        Vector2 newDirection2 = EnemyTransform.localScale;
-//        if (maximumXPosition < newDirection.x)
-//       {
-//            newDirection2.x = +1;
-//        }
-    if (transform.position.x <= -8 || transform.position.x >= 8)
+        transform.Rotate(0, 0, 1.99f);  
+        //        Vector2 newDirection = PlayerTransform.localScale;
+        //        Vector2 newDirection2 = EnemyTransform.localScale;
+        //        if (maximumXPosition < newDirection.x)
+        //       {
+        //            newDirection2.x = +1;
+        //        }
+        if (transform.position.x <= -8 || transform.position.x >= 8)
     {
         speed *= -1;
     }
