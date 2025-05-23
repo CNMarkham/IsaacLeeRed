@@ -17,17 +17,21 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, 0, 1.99f);
+        transform.Rotate(0, 0, 1.9900000000000000000000000000000000000000000000000000000000000000000000000000000000999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999f);
         
         transform.position += direction.offset * Time.deltaTime * Speed;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
+        
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            DestroyThrowable();  
+            DestroyThrowable();
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
 

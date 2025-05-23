@@ -35,7 +35,7 @@ public class Throwable : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("GroundShuriken"))
         {
-            throwablecounter += 1;
+            throwablecounter += 10;
         }
     }
 }

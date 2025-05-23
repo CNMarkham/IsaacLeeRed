@@ -28,5 +28,9 @@ public class EnemyCollison : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (collision.gameObject.CompareTag("GroundShuriken"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
