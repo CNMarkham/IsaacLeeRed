@@ -9,6 +9,8 @@ TagManager:
   - GroundShuriken
   - Exit
   - Object
+  - GoalNet1
+  - GoalNet2
   layers:
   - Default
   - TransparentFX
