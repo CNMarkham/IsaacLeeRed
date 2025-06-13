@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyCollison : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class EnemyCollison : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Destroy(Avatar);
+            SceneManager.LoadScene(3);
         }
         if (collision.gameObject.CompareTag("ThrowingObject"))
         {

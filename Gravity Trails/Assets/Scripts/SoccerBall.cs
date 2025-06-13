@@ -37,7 +37,7 @@ public class SoccerBall : MonoBehaviour
 
         scoreText.text = ($"P1 Score:{P1Score}/9 P2 Score:{P2Score}/2");
 
-        if(goalNet1 == 1)
+        if(goalNet1 == 9)
         {
             SceneManager.LoadScene(3);
         }
