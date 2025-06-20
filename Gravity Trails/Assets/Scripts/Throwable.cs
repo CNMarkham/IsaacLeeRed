@@ -13,12 +13,12 @@ public class Throwable : MonoBehaviour
 
     void Update()
     {
-        collectableCounter.text = throwablecounter.ToString();
         if (Input.GetButtonDown("Fire1"))
         {
             if (throwablecounter != 0)
             {
                 throwablecounter -= 1;
+                collectableCounter.text = throwablecounter.ToString();
                 offset = new Vector3(1, 0, 0);
                 offset = transform.localScale.x * new Vector3(1, 0, 0);
                 Vector3 throwablePosition = transform.position + offset;
@@ -29,13 +29,10 @@ public class Throwable : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            Destroy(gameObject);
-        }
         if (collision.gameObject.CompareTag("GroundShuriken"))
         {
             throwablecounter += 10;
+            collectableCounter.text = throwablecounter.ToString();
         }
     }
 }

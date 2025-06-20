@@ -17,7 +17,7 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, 0, 1.9900000000000000000000000000000000000000000000000000000000000000000000000000000000999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999f);
+        transform.Rotate(0, 0, 1.5f);
         
         transform.position += direction.offset * Time.deltaTime * Speed;
     }

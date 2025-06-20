@@ -18,7 +18,7 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     private void fixedUpdate()
     {
-        transform.Rotate(0, 0, 1.99f);  
+        transform.Rotate(0, 0, 1.99f);
         //        Vector2 newDirection = PlayerTransform.localScale;
         //        Vector2 newDirection2 = EnemyTransform.localScale;
         //        if (maximumXPosition < newDirection.x)
@@ -26,12 +26,25 @@ public class EnemyMovement : MonoBehaviour
         //            newDirection2.x = +1;
         //        }
         if (transform.position.x <= -8 || transform.position.x >= 8)
-    {
-        speed *= -1;
+        {
+            speed *= -1;
+        }
+        float newXPosition = transform.position.x + speed * Time.fixedDeltaTime;
+        float newYPosition = transform.position.y;
+        Vector2 newPosition = new Vector2(newXPosition, newYPosition);
+        transform.position = newPosition;
     }
-    float newXPosition = transform.position.x + speed * Time.fixedDeltaTime;
-    float newYPosition = transform.position.y;
-    Vector2 newPosition = new Vector2(newXPosition, newYPosition);
-    transform.position = newPosition;
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (collision.gameObject.CompareTag("AutoKill"))
+        {
+            Destroy(gameObject);
+        }
+
+
+        {
+        }
     }
 }

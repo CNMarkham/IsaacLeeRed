@@ -11,6 +11,7 @@ TagManager:
   - Object
   - GoalNet1
   - GoalNet2
+  - AutoKill
   layers:
   - Default
   - TransparentFX
