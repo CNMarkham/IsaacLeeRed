@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 public class CodeyMove : MonoBehaviour
 {
     public float Speed = 15f;
@@ -9,7 +10,7 @@ public class CodeyMove : MonoBehaviour
     public bool canMove = true;
     public Vector3 move;
     public float _rotationSpeed = 50f;
-    private Rigidbody rb;
+    public Rigidbody rb;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -32,5 +33,14 @@ public class CodeyMove : MonoBehaviour
             anim.SetBool("isRunning", move != Vector3.zero);
         }
         
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "deathfloor")
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 }
