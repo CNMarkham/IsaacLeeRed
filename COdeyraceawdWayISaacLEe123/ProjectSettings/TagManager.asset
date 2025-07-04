@@ -4,7 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - deathfloor
+  - Terrain
+  - checkpoint
   layers:
   - Default
   - TransparentFX

@@ -36,9 +36,9 @@ public class CodeyMove : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.tag == "deathfloor")
+        if(collision.gameObject.tag == "Terrain")
         {
             SceneManager.LoadScene(0);
         }
