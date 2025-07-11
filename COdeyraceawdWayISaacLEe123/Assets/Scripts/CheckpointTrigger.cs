@@ -5,6 +5,7 @@ using UnityEngine;
 public class CheckpointTrigger : MonoBehaviour
 {
     public bool didActivate;
+    public CheckpointCount count;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class CheckpointTrigger : MonoBehaviour
         if ( other.gameObject.tag == "Player" && didActivate == false)
         {
             didActivate = true;
+            count.triggeredCheckponits++;
         }
     }
 }

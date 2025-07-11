@@ -19,12 +19,12 @@ public class CodeyMove : MonoBehaviour
     }
     void Update()
     {
-       
+
         if (canMove)
         {
 
             float vertical = Input.GetAxis("Vertical");
-            float horizontal = Input.GetAxis("Horizontal");            
+            float horizontal = Input.GetAxis("Horizontal");
             Vector3 rotation = new Vector3(0, horizontal * _rotationSpeed * Time.deltaTime, 0);
             move = transform.forward * Speed * Time.deltaTime * vertical;
             transform.Rotate(rotation);
@@ -32,9 +32,12 @@ public class CodeyMove : MonoBehaviour
 
             anim.SetBool("isRunning", move != Vector3.zero);
         }
-        
-    }
 
+        if (Input.GetKey(KeyCode.R))
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
 
     private void OnCollisionEnter(Collision collision)
     {

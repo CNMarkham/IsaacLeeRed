@@ -15,6 +15,6 @@ public class CheckpointCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        numberOfCheckpoints = GameObject.FindGameObjectsWithTag("checkpoint").Length;
     }
 }

@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class FIsnishLine : MonoBehaviour
 {
+    public CheckpointCount checkponitTracker;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("Yaya you winwam yay :)");
+            if(checkponitTracker.triggeredCheckponits == checkponitTracker.numberOfCheckpoints)
+            {
+                Debug.Log("Yaya you winwam yay :)");
+            }
+            if (checkponitTracker.triggeredCheckponits != checkponitTracker.numberOfCheckpoints)
+            {
+                Debug.Log("Nice Job You did it the wrong way");
+            }
         }
     }
     // Start is called before the first frame update
