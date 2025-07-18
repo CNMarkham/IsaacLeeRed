@@ -671,6 +671,7 @@ GameObject:
   - component: {fileID: 666427913629493321}
   - component: {fileID: 7594968790641212265}
   - component: {fileID: 8833283911713363921}
+  - component: {fileID: 6815131937692444479}
   m_Layer: 0
   m_Name: Codey
   m_TagString: Player
@@ -688,7 +689,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -24.3, y: 10.2, z: 169}
-  m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7261561572573912782}
@@ -729,7 +730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc3149b76bf3e4b8d98c2e9e1c53e668, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1400
+  Speed: 700
   running: 0
   canMove: 1
   move: {x: 0, y: 0, z: 0}
@@ -785,6 +786,23 @@ CapsuleCollider:
   m_Height: 4.627737
   m_Direction: 1
   m_Center: {x: 3.3338432e-10, y: 1.8138676, z: 0.050845742}
+--- !u!114 &6815131937692444479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2698314866638446860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24096086aecff6442938d3d5a173f262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PowerupList:
+  - {fileID: 46854684081580308, guid: ea188567d910b4345a33d592ca77db98, type: 3}
+  - {fileID: 4849543796734189280, guid: 0a08fd96896b2e24cb94605041afcba6, type: 3}
+  randomNumberInList: 0
+  chosenPowerup: {fileID: 0}
 --- !u!1 &2749644331451433365
 GameObject:
   m_ObjectHideFlags: 0

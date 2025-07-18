@@ -9,21 +9,28 @@ public class ItemBoxSpawer : MonoBehaviour
 
     public int numberOfBoxes;
 
+    public float itemBoxSpacing;
+
     // Start is called before the first frame update
     void Start()
     {
-        Vector3 BoxPosition = transform.position;
+        Vector3 SpawnLocations = itemBox.transform.position;
+        
+
         for (int i = 0; i < numberOfBoxes; i++)
         {
-            GameObject itemBoxClone = Instantiate(itemBox);
+            SpawnLocations.z = +itemBoxSpacing;
+            itemBoxSpacing -= 4;
 
-//            itemBox.transform.position == BoxPosition
+            GameObject itemBoxClone = Instantiate(itemBox, transform.position + SpawnLocations, transform.rotation);
+
+           
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
