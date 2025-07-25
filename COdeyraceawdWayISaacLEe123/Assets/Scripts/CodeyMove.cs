@@ -11,6 +11,8 @@ public class CodeyMove : MonoBehaviour
     public Vector3 move;
     public float _rotationSpeed = 50f;
     public Rigidbody rb;
+
+    public GameObject YouLose;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -43,7 +45,14 @@ public class CodeyMove : MonoBehaviour
     {
         if(collision.gameObject.tag == "Terrain")
         {
-            SceneManager.LoadScene(0);
+            YouLose.SetActive(true);
+
+            Invoke("Lose", 1);
         }
+    }
+
+    public void Lose()
+    {
+        SceneManager.LoadScene(0);
     }
 }

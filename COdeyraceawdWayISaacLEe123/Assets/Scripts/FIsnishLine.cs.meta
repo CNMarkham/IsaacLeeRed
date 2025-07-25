@@ -3,7 +3,10 @@ guid: 878e06252bc8c64498ec5d112a712570
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - YouWin: {fileID: 8796322456546392772, guid: 4643f904037121347b0855afe9f4bdf5, type: 3}
+  - YouWinCheater: {fileID: 3205013850086397715, guid: f2957aba230360b469af9b344a594e72, type: 3}
+  - checkponitTracker: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

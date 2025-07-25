@@ -3,7 +3,9 @@ guid: fc3149b76bf3e4b8d98c2e9e1c53e668
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - rb: {instanceID: 0}
+  - YouLose: {fileID: 6009695901944046498, guid: bb12eab613a74e44bac362f7fa01056c, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
